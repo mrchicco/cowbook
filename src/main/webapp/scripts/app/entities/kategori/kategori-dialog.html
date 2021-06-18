@@ -1,0 +1,62 @@
+
+<form name="editForm" role="form" novalidate ng-submit="save()">
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="clear()">&times;</button>
+        <h4 class="modal-title" id="myKategoriLabel">Create or edit a Kategori</h4>
+    </div>
+    <div class="modal-body">
+        <jh-alert-error></jh-alert-error>
+        <div class="form-group">
+            <label for="id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="kategori.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_namaKategori">NamaKategori</label>
+            <input type="text" class="form-control" name="namaKategori" id="field_namaKategori"
+                    ng-model="kategori.namaKategori"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_kapasitas">Kapasitas</label>
+            <input type="number" class="form-control" name="kapasitas" id="field_kapasitas"
+                    ng-model="kategori.kapasitas"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_dibuatOleh">DibuatOleh</label>
+            <input type="text" class="form-control" name="dibuatOleh" id="field_dibuatOleh"
+                    ng-model="kategori.dibuatOleh"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_tanggalDibuat">TanggalDibuat</label>
+            <input type="datetime-local" class="form-control" name="tanggalDibuat" id="field_tanggalDibuat"
+                    ng-model="kategori.tanggalDibuat"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_diperbaharuiOleh">DiperbaharuiOleh</label>
+            <input type="text" class="form-control" name="diperbaharuiOleh" id="field_diperbaharuiOleh"
+                    ng-model="kategori.diperbaharuiOleh"
+                     />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_tanggalDiperbaharui">TanggalDiperbaharui</label>
+            <input type="datetime-local" class="form-control" name="tanggalDiperbaharui" id="field_tanggalDiperbaharui"
+                    ng-model="kategori.tanggalDiperbaharui"
+                     />
+        </div>
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span>Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span>Save</span>
+        </button>
+    </div>
+</form>

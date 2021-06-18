@@ -1,0 +1,22 @@
+{
+  "generator-jhipster": {
+    "baseName": "cowbook",
+    "packageName": "cowbook",
+    "packageFolder": "cowbook",
+    "authenticationType": "oauth2",
+    "hibernateCache": "no",
+    "clusteredHttpSession": "no",
+    "websocket": "no",
+    "databaseType": "sql",
+    "devDatabaseType": "postgresql",
+    "prodDatabaseType": "postgresql",
+    "searchEngine": "no",
+    "useSass": false,
+    "buildTool": "maven",
+    "frontendBuilder": "grunt",
+    "enableTranslation": false,
+    "enableSocialSignIn": false,
+    "rememberMeKey": "f22c24ec10ce0f541d323e651084922f68603df3",
+    "testFrameworks": []
+  }
+}

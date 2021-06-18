@@ -1,0 +1,69 @@
+<div>
+    <h2>Kategoris</h2>
+    <jh-alert></jh-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="kategori.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span 
+                       >Create new Kategori
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr jh-sort="predicate" ascending="reverse" callback="loadAll()">
+                    <th jh-sort-by="id"><span>ID</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="namaKategori"><span>NamaKategori</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="kapasitas"><span>Kapasitas</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="dibuatOleh"><span>DibuatOleh</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="tanggalDibuat"><span>TanggalDibuat</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="diperbaharuiOleh"><span>DiperbaharuiOleh</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th jh-sort-by="tanggalDiperbaharui"><span>TanggalDiperbaharui</span> <span class="glyphicon glyphicon-sort"></span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="kategori in kategoris track by kategori.id">
+                    <td><a ui-sref="kategori.detail({id:kategori.id})">{{kategori.id}}</a></td>
+                    <td>{{kategori.namaKategori}}</td>
+                    <td>{{kategori.kapasitas}}</td>
+                    <td>{{kategori.dibuatOleh}}</td>
+                    <td>{{kategori.tanggalDibuat | date:'medium'}}</td>
+                    <td>{{kategori.diperbaharuiOleh}}</td>
+                    <td>{{kategori.tanggalDiperbaharui | date:'medium'}}</td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="kategori.detail({id:kategori.id})"
+                                    class="btn btn-info btn-sm"> 
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-xs hidden-sm"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="kategori.edit({id:kategori.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-xs hidden-sm"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="kategori.delete({id:kategori.id})"
+                                    class="btn btn-danger btn-sm">                                    
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-xs hidden-sm"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="text-center">
+        <uib-pagination class="pagination-sm" total-items="totalItems" ng-model="page" ng-change="loadAll()"></uib-pagination>
+    </div>
+</div>

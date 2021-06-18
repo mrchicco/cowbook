@@ -1,0 +1,39 @@
+{
+    "relationships": [],
+    "fields": [
+        {
+            "fieldId": 1,
+            "fieldName": "namaKategori",
+            "fieldType": "String"
+        },
+        {
+            "fieldId": 2,
+            "fieldName": "kapasitas",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldId": 3,
+            "fieldName": "dibuatOleh",
+            "fieldType": "String"
+        },
+        {
+            "fieldId": 4,
+            "fieldName": "tanggalDibuat",
+            "fieldType": "ZonedDateTime"
+        },
+        {
+            "fieldId": 5,
+            "fieldName": "diperbaharuiOleh",
+            "fieldType": "String"
+        },
+        {
+            "fieldId": 6,
+            "fieldName": "tanggalDiperbaharui",
+            "fieldType": "ZonedDateTime"
+        }
+    ],
+    "changelogDate": "20210618065926",
+    "dto": "mapstruct",
+    "service": "serviceImpl",
+    "pagination": "pagination"
+}
