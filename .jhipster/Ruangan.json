@@ -1,0 +1,52 @@
+{
+    "relationships": [
+        {
+            "relationshipId": 1,
+            "relationshipName": "kategori",
+            "otherEntityName": "kategori",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
+        }
+    ],
+    "fields": [
+        {
+            "fieldId": 1,
+            "fieldName": "nama_ruangan",
+            "fieldType": "String"
+        },
+        {
+            "fieldId": 2,
+            "fieldName": "harga",
+            "fieldType": "Double"
+        },
+        {
+            "fieldId": 3,
+            "fieldName": "aktif",
+            "fieldType": "Boolean"
+        },
+        {
+            "fieldId": 4,
+            "fieldName": "dibuatOleh",
+            "fieldType": "String"
+        },
+        {
+            "fieldId": 5,
+            "fieldName": "tanggalDibuat",
+            "fieldType": "ZonedDateTime"
+        },
+        {
+            "fieldId": 6,
+            "fieldName": "diperbaharuiOleh",
+            "fieldType": "String"
+        },
+        {
+            "fieldId": 7,
+            "fieldName": "tanggalDiperbaharui",
+            "fieldType": "ZonedDateTime"
+        }
+    ],
+    "changelogDate": "20210618142145",
+    "dto": "mapstruct",
+    "service": "serviceImpl",
+    "pagination": "pagination"
+}

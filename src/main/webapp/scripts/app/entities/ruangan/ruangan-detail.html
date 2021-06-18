@@ -1,0 +1,86 @@
+
+<div>
+    <h2><span>Ruangan</span> {{ruangan.id}}</h2>
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th>Field</th>
+                <th>Value</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>
+                    <span>Nama_ruangan</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{ruangan.nama_ruangan}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span>Harga</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{ruangan.harga}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span>Aktif</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{ruangan.aktif}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span>DibuatOleh</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{ruangan.dibuatOleh}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span>TanggalDibuat</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{ruangan.tanggalDibuat | date:'medium'}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span>DiperbaharuiOleh</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{ruangan.diperbaharuiOleh}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span>TanggalDiperbaharui</span>
+                </td>
+                <td>
+                    <span class="form-control-static">{{ruangan.tanggalDiperbaharui | date:'medium'}}</span>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <span>kategori</span>
+                </td>
+                <td>
+                    <a class="form-control-static" ui-sref="kategori.detail({id:ruangan.kategoriId})">{{ruangan.kategoriId}}</a>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <button type="submit"
+            onclick="window.history.back()"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span> Back</span>
+    </button>
+</div>
